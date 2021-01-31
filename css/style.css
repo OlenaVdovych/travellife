@@ -1,0 +1,440 @@
+@import url(/css/reset.css);
+
+body {
+    font-family: "Yusei Magic", sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+@media (max-width: 1400px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+}
+
+.bimagehome {
+    background: no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: scroll;
+}
+
+.carousel {
+    margin-top: 300px;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+}
+
+.carousel-inner {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-caption {}
+
+.pouring {
+    font-size: 35px;
+    line-height: 40px;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 900;
+    position: relative;
+    background: white;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.pouring:before {
+    content: "";
+    position: absolute;
+    filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background-image: repeating-linear-gradient(-45deg,
+            transparent,
+            transparent 1em,
+            #bfe2ff 1em,
+            #337ab7 50%),
+        repeating-linear-gradient(45deg,
+            #337ab7,
+            #337ab7 1em,
+            #fff 1em,
+            #bfe2ff 50%);
+    background-size: 3em 3em, 2em 2em;
+    animation-name: ani;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ani {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+@media (max-width: 1400px) {
+    .pouring {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .pouring {
+        font-size: 30px;
+        line-height: 27px;
+        margin-bottom: 30px;
+        /*margin-top: 550px;*/
+    }
+}
+
+@media (max-width: 992px) {
+    .pouring {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        /*margin-top: 570px;*/
+    }
+}
+
+@media (max-width: 767px) {
+    .pouring {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 590px) {
+    .pouring {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 10px;
+        /*margin-top: 600px;*/
+    }
+}
+
+@media (max-width: 393px) {
+    .pouring {
+        font-size: 9px;
+        line-height: 10px;
+        margin-bottom: 10px;
+        /*margin-top: 1000px;*/
+    }
+}
+
+.headhome-center {
+    margin: 0;
+    padding: 0;
+}
+
+.paragraph {
+    text-align: center;
+    justify-content: center;
+    font-family: "Yusei Magic", sans-serif;
+    color: rgb(255, 255, 255);
+    text-size-adjust: 15px;
+    font-size: 40px;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+
+.paragraph:hover {
+    color: rgb(168, 168, 255);
+}
+
+@media (max-width: 1400px) {
+    .paragraph {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .paragraph {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 590px) {
+    .paragraph {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 393px) {
+    .paragraph {
+        font-size: 20px;
+    }
+}
+
+.text-lg-center {
+    text-align: center;
+    font-family: "Yusei Magic", sans-serif;
+    text-size-adjust: 15px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1400px) {
+    .text-lg-center {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .text-lg-center {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 590px) {
+    .text-lg-center {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 393px) {
+    .text-lg-center {
+        font-size: 10px;
+    }
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+section.sec1 {
+    background: url(/img/rome/parallax.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+}
+
+section.sec2 {
+    background: url(/img/paris/parallax.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+}
+
+section.sec3 {
+    background: url(/img/singapore/parallax.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+}
+
+section.sec4 {
+    background: url(/img/abu-dhabi/parallax.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+}
+
+.sectext {
+    padding: 2% 4%;
+    height: auto;
+    color: blanchedalmond;
+    text-align: center;
+    font-family: "Yusei Magic", sans-serif;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+
+.sectexttitle {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: rgb(231, 235, 241);
+    text-align: center;
+    font-family: "Yusei Magic", sans-serif;
+}
+
+.sectexttitle:hover {
+    color: rgb(168, 168, 255);
+}
+
+@media (max-width: 1400px) {
+    .sectexttitle {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sectexttitle {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 590px) {
+    .sectexttitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 393px) {
+    .sectexttitle {
+        font-size: 18px;
+    }
+}
+
+.sectextdsc {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Yusei Magic", sans-serif;
+}
+
+@media (max-width: 1400px) {
+    .sectextdsc {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sectextdsc {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 590px) {
+    .sectextdsc {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 393px) {
+    .sectextdsc {
+        font-size: 10px;
+    }
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.moreinfo {
+    text-align: end;
+    font-size: 15px;
+}
+
+@media (max-width: 1400px) {
+    .moreinfo {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .moreinfo {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 590px) {
+    .moreinfo {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 393px) {
+    .moreinfo {
+        font-size: 8px;
+    }
+}
+
+footer {
+    display: flex;
+    position: relative;
+}
+
+.footer-top {
+    display: flex;
+    color: white;
+    background-color: #151515;
+    font-family: "Yusei Magic", sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+    background: url(/img/icon/icon-travel-8.jpg) no-repeat center start;
+}
+
+.footer-info {
+    font-size: 11px;
+    justify-content: center;
+}
+
+.icon-info {
+    width: 10%;
+    height: 10%;
+}
+
+.social-links {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 578px) {
+    .social-links {
+        display: flex;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin-left: 60px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .social-links {
+        width: 15px;
+        height: 15px;
+        padding-right: 50px;
+    }
+}
+
+.social-links a {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer-newsletter {
+    font-size: 11px;
+    font-family: "Yusei Magic", sans-serif;
+    margin-top: 40px;
+    justify-content: center;
+    text-align: start;
+    align-items: center;
+}

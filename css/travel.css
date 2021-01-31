@@ -1,0 +1,200 @@
+@import url(/css/reset.css);
+
+body {
+	display: flex;
+	font-family: 'Yusei Magic', sans-serif;
+	margin: 0;
+}
+
+.bimage {
+	background: no-repeat center center fixed;
+	background-size: cover;
+	height: 100%;
+	overflow: scroll;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+label[for] {
+	cursor: pointer;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+body {
+	background-color: #000;
+}
+
+.lightbox,
+.grid {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.lightbox {
+	z-index: 1;
+	min-height: 100%;
+	overflow: auto;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: -webkit-transform .5s ease-out;
+	transition: transform .5s ease-out;
+}
+
+.lightbox img {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	max-width: 96%;
+	max-height: 96%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+}
+
+input[type="checkbox"]:checked+.lightbox {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+input[type="checkbox"]:checked~.grid {
+	opacity: .125;
+}
+
+.grid {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	z-index: 0;
+	height: 100%;
+	padding: 16px;
+	overflow: auto;
+	background-color: rgba(34, 34, 34, 0.741);
+	text-align: center;
+	-webkit-transition: opacity .75s;
+	transition: opacity .75s;
+}
+
+.grid .grid-item {
+	display: inline-block;
+	width: 25%;
+	padding: 16px;
+	opacity: .75;
+	-webkit-transition: opacity .5s;
+	transition: opacity .5s;
+}
+
+.grid .grid-item:hover {
+	opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+	.grid .grid-item {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.grid .grid-item {
+		width: 100%;
+	}
+}
+
+.grid img {
+	max-width: 100%;
+	max-height: 100%;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+}
+
+footer {
+	display: flex;
+	position: relative;
+
+}
+
+.footer-top {
+	display: flex;
+	color: white;
+	background-color: #151515;
+	font-family: 'Yusei Magic', sans-serif;
+	margin-right: auto;
+	margin-left: auto;
+	background: url(/img/icon/icon-travel-8.jpg) no-repeat center start;
+}
+
+.footer-info {
+
+	font-size: 11px;
+	justify-content: center;
+}
+
+.icon-info {
+	width: 10%;
+	height: 10%;
+}
+
+.social-links {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+}
+
+@media (max-width: 578px) {
+	.social-links {
+		display: flex;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		margin-left: 60px;
+		padding: 0;
+	}
+}
+
+@media (max-width: 360px) {
+	.social-links {
+		width: 15px;
+		height: 15px;
+		padding-right: 50px;
+	}
+
+}
+
+.social-links a {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.footer-newsletter {
+	font-size: 11px;
+	font-family: 'Yusei Magic', sans-serif;
+	margin-top: 40px;
+	justify-content: center;
+	text-align: start;
+	align-items: center;
+}

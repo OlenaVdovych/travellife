@@ -1,0 +1,343 @@
+@import url(/css/reset.css);
+
+body {
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 0px auto;
+}
+@media (max-width: 1400px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+}
+.bimage {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: scroll;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 10%;
+  padding-top: 45%;
+  position: relative;
+  width: 100%;
+  margin-top: 65px;
+}
+
+.map-responsive iframe {
+  display: flex;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+@media (max-width: 1400px) {
+  .map-responsive {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .map-responsive {
+    width: 100%;
+  }
+}
+
+.form {
+  color: white;
+  max-width: 550px;
+  margin: 0px auto;
+  padding: 30px 0;
+}
+. @media (max-width:550px) {
+  .form {
+    max-width: 550px;
+  }
+}
+@media (max-width: 393px) {
+  .form {
+    max-width: 300px;
+  }
+}
+.form * {
+  outline: none;
+}
+
+.form_body {
+  position: relative;
+}
+
+.form_body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/img/contact/animation.gif) center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.form_body._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form_title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0px 0px 30px 0px;
+  font-family: "Yusei Magic", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.form_title_p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Yusei Magic", sans-serif;
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.form_item {
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+.form_label {
+  color: white;
+  font-size: 18px;
+  display: block;
+  margin: 0px 0px 10px 0px;
+}
+
+.form_input {
+  height: 50px;
+  padding: 0px 20px;
+  border-radius: 5px;
+  width: 50%;
+  justify-content: center;
+  font-size: 15px;
+  transition: all 0.5s ease 0s;
+}
+
+.form_input:focus {
+  box-shadow: 0 0 15px rgb(165, 154, 154);
+}
+
+.form_input._error {
+  box-shadow: 0 0 10px red;
+}
+
+textarea.form_input {
+  min-height: 120px;
+  padding: 20px;
+}
+
+.file {
+}
+
+.file_item {
+  position: relative;
+  text-align: center;
+}
+
+.file_input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+  justify-content: start;
+}
+
+.file_button {
+  display: inline-flex;
+  min-height: 30px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: rgb(89, 77, 77);
+  padding: 0px 20px;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+.file_preview {
+  display: inline-block;
+  max-width: 100px;
+  padding: 10px 0px 0px 0px;
+}
+
+.file_preview img {
+  min-width: 100%;
+}
+
+.checkbox {
+  padding: 10px 0px 0px 0px;
+}
+
+.checkbox._error .checkbox_label::before {
+  box-shadow: 0 0 10px red;
+}
+
+.checkbox_input {
+  display: none;
+}
+
+.checkbox_input:checked + .checkbox_label::after {
+  transform: scale(1);
+}
+
+.checkbox_label {
+  font-size: 16px;
+  line-height: 140%;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+.checkbox_label::before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.checkbox_label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: rgb(165, 154, 154);
+  border-radius: 4px;
+  transform: scale(0);
+  transition: transform 0.5s ease 0s;
+}
+
+.checkbox_label a {
+  color: rgb(165, 154, 154);
+}
+
+.form_button {
+  display: inline-flex;
+  font-family: "Yusei Magic", sans-serif;
+  padding: 10px;
+  width: 50%;
+  color: rgb(89, 77, 77);
+  border: 0;
+  margin-top: 5px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  min-height: 40px;
+  letter-spacing: 2px;
+  transition: background-color 0.5s ease 0s;
+  position: relative;
+  top: 0;
+}
+
+.form_button:hover {
+  background-color: rgb(216, 203, 203);
+}
+
+.form_button:active {
+  top: 5px;
+}
+
+footer {
+  display: flex;
+  position: relative;
+}
+.footer-top {
+  display: flex;
+  color: white;
+  background-color: #151515;
+  font-family: "Yusei Magic", sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  background: url(/img/icon/icon-travel-8.jpg) no-repeat center start;
+}
+.footer-info {
+  font-size: 11px;
+  justify-content: center;
+}
+.icon-info {
+  width: 10%;
+  height: 10%;
+}
+.social-links {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 578px) {
+  .social-links {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 60px;
+    padding: 0;
+  }
+}
+@media (max-width: 360px) {
+  .social-links {
+    width: 15px;
+    height: 15px;
+    padding-right: 50px;
+  }
+}
+.social-links a {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-newsletter {
+  font-size: 11px;
+  font-family: "Yusei Magic", sans-serif;
+  margin-top: 40px;
+  justify-content: center;
+  text-align: start;
+  align-items: center;
+}
