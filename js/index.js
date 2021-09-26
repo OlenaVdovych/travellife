@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (error === 0) {
             form.classList.add('_sending');
-            /*let response = await fetch('sendmail.php', {
+            let response = await fetch('/sendmail.php', {
                 method: 'POST',
                 body: formData
-            });*/
+            });
             if (response.ok) {
                 let result = await response.json();
                 alert(result.message);
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return error;
     }
-
+    
     function formAddError(input) {
         input.parentElement.classList.add('_error');
         input.classList.add('_error');
