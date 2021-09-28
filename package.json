@@ -2,7 +2,7 @@
   "name": "travellife",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/index.js",
   "dependencies": {
     "aggregate-error": "^3.1.0",
     "ansi-html-community": "^0.0.8",
